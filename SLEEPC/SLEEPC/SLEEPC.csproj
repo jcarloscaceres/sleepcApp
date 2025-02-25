@@ -52,8 +52,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAcercade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcercade.Designer.cs">
+      <DependentUpon>FrmAcercade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAcercade.resx">
+      <DependentUpon>FrmAcercade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +97,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SleePC-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SleePC-Configuracion-icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SleePC-Cotejo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SleePC-lcono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SleePC-ojos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SLEEPC_SOUND_EDIT.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

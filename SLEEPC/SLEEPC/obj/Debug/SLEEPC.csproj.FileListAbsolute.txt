@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\bin\Debug\SLEEPC.exe.config
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\bin\Debug\SLEEPC.exe
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\bin\Debug\SLEEPC.pdb
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.Form1.resources
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.FrmAcercade.resources
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.Properties.Resources.resources
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.exe
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.pdb
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.FrmConfig.resources
