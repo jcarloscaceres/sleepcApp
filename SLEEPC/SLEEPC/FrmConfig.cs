@@ -19,6 +19,14 @@ namespace SLEEPC
         public int Inter;
         public string HoraCompleta;
         public bool Son;
+        public enum SetFuncion
+        {
+            A, //0
+            S, //1
+            B //2
+        }
+
+        public string RFuncion;
 
 
 
@@ -55,6 +63,22 @@ namespace SLEEPC
 
             NudIntervalo.Value = Convert.ToDecimal(Properties.Settings.Default.CIntervalo);
             ChkSonido.Checked = Properties.Settings.Default.CSonido;
+
+            SetFuncion accion = (SetFuncion)Properties.Settings.Default.CFuncion;
+            switch (accion)
+            {
+                case SetFuncion.A:
+                    RbApagar.Checked = true;
+                    break;
+
+                case SetFuncion.B:
+                    RbBloquear.Checked = true;
+                    break;
+
+                case SetFuncion.S:
+                    RbSuspender.Checked = true;
+                    break;
+            }
 
 
         }
@@ -99,9 +123,27 @@ namespace SLEEPC
             Properties.Settings.Default.CIntervalo = Inter;
             Properties.Settings.Default.CSonido = Son;
 
+            //funcion que va a realizar la app (bloquear, suspender o apagar)
+            if (RbApagar.Checked == true)
+            {
+                Properties.Settings.Default.CFuncion = (int)SetFuncion.A;
+                RFuncion = "Apagar PC";
+            }
+            else if (RbSuspender.Checked == true)
+            {
+                Properties.Settings.Default.CFuncion = (int)SetFuncion.S;
+                RFuncion = "Suspender PC";
+            }
+            else if (RbBloquear.Checked == true)
+            {
+                Properties.Settings.Default.CFuncion = (int)SetFuncion.B;
+                RFuncion = "Bloquear Pantalla";
+            }
+
+            //Guardar valores de configuracion.
             Properties.Settings.Default.Save();
 
-            MessageBox.Show("Hora deActivación establecida a: " + HoraCompleta, "Mensaje SLEEPC",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Hora de Activación establecida a las " + HoraCompleta + ";" + " " + "Con un intervalo de verificación en " + Inter + ";" + " " + "minutos "+ ";" + " " + "Acción a realizar; " + RFuncion, "Mensaje SLEEPC",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         //Boton guardar

@@ -10,3 +10,8 @@ C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\
 C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.exe
 C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.pdb
 C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.FrmConfig.resources
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\bin\Debug\CircularProgressBar.dll
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\bin\Debug\WinFormAnimation.dll
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\bin\Debug\CircularProgressBar.xml
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.FrmConteo.resources
+C:\Users\Admin\Documents\Personal\codigo\Visual_Studio\SleePC\SLEEPC\SLEEPC\obj\Debug\SLEEPC.csproj.CopyComplete

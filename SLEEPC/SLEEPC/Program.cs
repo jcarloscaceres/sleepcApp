@@ -16,7 +16,7 @@ namespace SLEEPC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConfig());
+            Application.Run(new Form1());
         }
     }
 }

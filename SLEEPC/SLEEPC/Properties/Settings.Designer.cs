@@ -61,13 +61,13 @@ namespace SLEEPC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool CActivo {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CFuncion {
             get {
-                return ((bool)(this["CActivo"]));
+                return ((int)(this["CFuncion"]));
             }
             set {
-                this["CActivo"] = value;
+                this["CFuncion"] = value;
             }
         }
     }

@@ -53,6 +53,11 @@ namespace SLEEPC
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnManual = new System.Windows.Forms.Button();
+            this.LblFuncion = new System.Windows.Forms.Label();
+            this.RbApagar = new System.Windows.Forms.RadioButton();
+            this.RbSuspender = new System.Windows.Forms.RadioButton();
+            this.RbBloquear = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PnCfSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbIcono)).BeginInit();
             this.PnHora.SuspendLayout();
@@ -60,6 +65,7 @@ namespace SLEEPC
             ((System.ComponentModel.ISupportInitialize)(this.NudHora)).BeginInit();
             this.PnIntervalo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudIntervalo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnCfSuperior
@@ -133,7 +139,7 @@ namespace SLEEPC
             this.PnHora.Controls.Add(this.NudMinutos);
             this.PnHora.Controls.Add(this.NudHora);
             this.PnHora.Controls.Add(this.LblTextoHora);
-            this.PnHora.Location = new System.Drawing.Point(28, 131);
+            this.PnHora.Location = new System.Drawing.Point(28, 206);
             this.PnHora.Name = "PnHora";
             this.PnHora.Size = new System.Drawing.Size(274, 137);
             this.PnHora.TabIndex = 14;
@@ -277,7 +283,7 @@ namespace SLEEPC
             this.PnIntervalo.Controls.Add(this.label6);
             this.PnIntervalo.Controls.Add(this.NudIntervalo);
             this.PnIntervalo.Controls.Add(this.LblTextoIntervalo);
-            this.PnIntervalo.Location = new System.Drawing.Point(332, 131);
+            this.PnIntervalo.Location = new System.Drawing.Point(332, 206);
             this.PnIntervalo.Name = "PnIntervalo";
             this.PnIntervalo.Size = new System.Drawing.Size(274, 137);
             this.PnIntervalo.TabIndex = 15;
@@ -340,9 +346,9 @@ namespace SLEEPC
             this.ChkSonido.AutoSize = true;
             this.ChkSonido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChkSonido.ForeColor = System.Drawing.Color.DimGray;
-            this.ChkSonido.Location = new System.Drawing.Point(28, 279);
+            this.ChkSonido.Location = new System.Drawing.Point(28, 354);
             this.ChkSonido.Name = "ChkSonido";
-            this.ChkSonido.Size = new System.Drawing.Size(185, 20);
+            this.ChkSonido.Size = new System.Drawing.Size(186, 20);
             this.ChkSonido.TabIndex = 16;
             this.ChkSonido.Text = "Emitir Sonido al Notificar 🔊";
             this.ChkSonido.UseVisualStyleBackColor = true;
@@ -354,7 +360,7 @@ namespace SLEEPC
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(518, 275);
+            this.BtnGuardar.Location = new System.Drawing.Point(518, 350);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(88, 34);
             this.BtnGuardar.TabIndex = 17;
@@ -370,7 +376,7 @@ namespace SLEEPC
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnCancelar.Location = new System.Drawing.Point(424, 275);
+            this.BtnCancelar.Location = new System.Drawing.Point(424, 350);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(88, 34);
             this.BtnCancelar.TabIndex = 18;
@@ -386,18 +392,79 @@ namespace SLEEPC
             this.BtnManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnManual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnManual.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnManual.Location = new System.Drawing.Point(379, 274);
+            this.BtnManual.Location = new System.Drawing.Point(379, 349);
             this.BtnManual.Name = "BtnManual";
             this.BtnManual.Size = new System.Drawing.Size(39, 34);
             this.BtnManual.TabIndex = 19;
             this.BtnManual.Text = "?";
             this.BtnManual.UseVisualStyleBackColor = false;
             // 
+            // LblFuncion
+            // 
+            this.LblFuncion.AutoSize = true;
+            this.LblFuncion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFuncion.ForeColor = System.Drawing.Color.MediumBlue;
+            this.LblFuncion.Location = new System.Drawing.Point(233, 132);
+            this.LblFuncion.Name = "LblFuncion";
+            this.LblFuncion.Size = new System.Drawing.Size(168, 20);
+            this.LblFuncion.TabIndex = 20;
+            this.LblFuncion.Text = "Seleccione la Función:";
+            // 
+            // RbApagar
+            // 
+            this.RbApagar.AutoSize = true;
+            this.RbApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbApagar.Location = new System.Drawing.Point(19, 8);
+            this.RbApagar.Name = "RbApagar";
+            this.RbApagar.Size = new System.Drawing.Size(97, 22);
+            this.RbApagar.TabIndex = 21;
+            this.RbApagar.Text = "Apagar PC";
+            this.RbApagar.UseVisualStyleBackColor = true;
+            // 
+            // RbSuspender
+            // 
+            this.RbSuspender.AutoSize = true;
+            this.RbSuspender.Checked = true;
+            this.RbSuspender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbSuspender.Location = new System.Drawing.Point(141, 8);
+            this.RbSuspender.Name = "RbSuspender";
+            this.RbSuspender.Size = new System.Drawing.Size(122, 22);
+            this.RbSuspender.TabIndex = 22;
+            this.RbSuspender.TabStop = true;
+            this.RbSuspender.Text = "Suspender PC";
+            this.RbSuspender.UseVisualStyleBackColor = true;
+            // 
+            // RbBloquear
+            // 
+            this.RbBloquear.AutoSize = true;
+            this.RbBloquear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbBloquear.Location = new System.Drawing.Point(288, 8);
+            this.RbBloquear.Name = "RbBloquear";
+            this.RbBloquear.Size = new System.Drawing.Size(141, 22);
+            this.RbBloquear.TabIndex = 23;
+            this.RbBloquear.TabStop = true;
+            this.RbBloquear.Text = "Bloquear Pantalla";
+            this.RbBloquear.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.RbApagar);
+            this.panel1.Controls.Add(this.RbBloquear);
+            this.panel1.Controls.Add(this.RbSuspender);
+            this.panel1.Location = new System.Drawing.Point(93, 157);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(448, 39);
+            this.panel1.TabIndex = 24;
+            // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 316);
+            this.ClientSize = new System.Drawing.Size(634, 392);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.LblFuncion);
             this.Controls.Add(this.BtnManual);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnGuardar);
@@ -407,9 +474,9 @@ namespace SLEEPC
             this.Controls.Add(this.LblTexto);
             this.Controls.Add(this.PnCfSuperior);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(650, 355);
+            this.MaximumSize = new System.Drawing.Size(650, 431);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(650, 355);
+            this.MinimumSize = new System.Drawing.Size(650, 431);
             this.Name = "FrmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración SLEEPC";
@@ -424,6 +491,8 @@ namespace SLEEPC
             this.PnIntervalo.ResumeLayout(false);
             this.PnIntervalo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudIntervalo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +524,10 @@ namespace SLEEPC
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnManual;
+        private System.Windows.Forms.Label LblFuncion;
+        private System.Windows.Forms.RadioButton RbApagar;
+        private System.Windows.Forms.RadioButton RbSuspender;
+        private System.Windows.Forms.RadioButton RbBloquear;
+        private System.Windows.Forms.Panel panel1;
     }
 }
