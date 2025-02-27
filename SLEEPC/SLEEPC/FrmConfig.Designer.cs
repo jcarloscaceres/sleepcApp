@@ -29,6 +29,7 @@ namespace SLEEPC
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfig));
             this.PnCfSuperior = new System.Windows.Forms.Panel();
             this.LblVersion = new System.Windows.Forms.Label();
             this.LblCfTitulo = new System.Windows.Forms.Label();
@@ -473,11 +474,14 @@ namespace SLEEPC
             this.Controls.Add(this.PnHora);
             this.Controls.Add(this.LblTexto);
             this.Controls.Add(this.PnCfSuperior);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(650, 431);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(650, 431);
             this.Name = "FrmConfig";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración SLEEPC";
             this.Load += new System.EventHandler(this.FrmConfig_Load);

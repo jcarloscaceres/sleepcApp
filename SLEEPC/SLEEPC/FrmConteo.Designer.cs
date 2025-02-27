@@ -30,6 +30,7 @@ namespace SLEEPC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConteo));
             this.PnCfSuperior = new System.Windows.Forms.Panel();
             this.LblCfTitulo = new System.Windows.Forms.Label();
             this.PbIcono = new System.Windows.Forms.PictureBox();
@@ -164,6 +165,7 @@ namespace SLEEPC
             // 
             // FrmConteo
             // 
+            this.AcceptButton = this.BtnConteo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
@@ -175,12 +177,16 @@ namespace SLEEPC
             this.Controls.Add(this.LblTituloC);
             this.Controls.Add(this.PbBarra);
             this.Controls.Add(this.PnCfSuperior);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(372, 329);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(372, 329);
             this.Name = "FrmConteo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmConteo_Load);
             this.PnCfSuperior.ResumeLayout(false);
             this.PnCfSuperior.PerformLayout();

@@ -31,28 +31,28 @@ namespace SLEEPC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAcercade));
             this.PnAdSuperior = new System.Windows.Forms.Panel();
-            this.LblAdTitulo = new System.Windows.Forms.Label();
             this.LblVersion = new System.Windows.Forms.Label();
+            this.LblAdTitulo = new System.Windows.Forms.Label();
+            this.PbIcono = new System.Windows.Forms.PictureBox();
             this.LblTitulo1 = new System.Windows.Forms.Label();
             this.PnContenido = new System.Windows.Forms.Panel();
-            this.LblDescripcion = new System.Windows.Forms.Label();
-            this.LblDesarrollador = new System.Windows.Forms.Label();
-            this.LblTitulo2 = new System.Windows.Forms.Label();
+            this.LknGitHub = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.LnkInstagram = new System.Windows.Forms.LinkLabel();
+            this.LblDespedida = new System.Windows.Forms.Label();
+            this.LblLicencia = new System.Windows.Forms.Label();
+            this.RtbLicencia = new System.Windows.Forms.RichTextBox();
+            this.LblTitulo4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LblTitulo3 = new System.Windows.Forms.Label();
-            this.LblTitulo4 = new System.Windows.Forms.Label();
-            this.RtbLicencia = new System.Windows.Forms.RichTextBox();
-            this.LblLicencia = new System.Windows.Forms.Label();
-            this.LblDespedida = new System.Windows.Forms.Label();
+            this.LblDesarrollador = new System.Windows.Forms.Label();
+            this.LblTitulo2 = new System.Windows.Forms.Label();
+            this.LblDescripcion = new System.Windows.Forms.Label();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.BtnManual = new System.Windows.Forms.Button();
-            this.LnkInstagram = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.LknGitHub = new System.Windows.Forms.LinkLabel();
-            this.PbIcono = new System.Windows.Forms.PictureBox();
             this.PnAdSuperior.SuspendLayout();
-            this.PnContenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbIcono)).BeginInit();
+            this.PnContenido.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnAdSuperior
@@ -67,6 +67,17 @@ namespace SLEEPC
             this.PnAdSuperior.Size = new System.Drawing.Size(584, 63);
             this.PnAdSuperior.TabIndex = 0;
             // 
+            // LblVersion
+            // 
+            this.LblVersion.AutoSize = true;
+            this.LblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVersion.ForeColor = System.Drawing.Color.MediumBlue;
+            this.LblVersion.Location = new System.Drawing.Point(475, 19);
+            this.LblVersion.Name = "LblVersion";
+            this.LblVersion.Size = new System.Drawing.Size(105, 24);
+            this.LblVersion.TabIndex = 2;
+            this.LblVersion.Text = "Versión 1.1";
+            // 
             // LblAdTitulo
             // 
             this.LblAdTitulo.AutoSize = true;
@@ -78,16 +89,15 @@ namespace SLEEPC
             this.LblAdTitulo.TabIndex = 1;
             this.LblAdTitulo.Text = "SLEEPC";
             // 
-            // LblVersion
+            // PbIcono
             // 
-            this.LblVersion.AutoSize = true;
-            this.LblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVersion.ForeColor = System.Drawing.Color.MediumBlue;
-            this.LblVersion.Location = new System.Drawing.Point(475, 19);
-            this.LblVersion.Name = "LblVersion";
-            this.LblVersion.Size = new System.Drawing.Size(105, 24);
-            this.LblVersion.TabIndex = 2;
-            this.LblVersion.Text = "Versión 1.1";
+            this.PbIcono.Image = global::SLEEPC.Properties.Resources.SleePC_logo;
+            this.PbIcono.Location = new System.Drawing.Point(8, 3);
+            this.PbIcono.Name = "PbIcono";
+            this.PbIcono.Size = new System.Drawing.Size(60, 57);
+            this.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbIcono.TabIndex = 0;
+            this.PbIcono.TabStop = false;
             // 
             // LblTitulo1
             // 
@@ -121,37 +131,84 @@ namespace SLEEPC
             this.PnContenido.Size = new System.Drawing.Size(561, 469);
             this.PnContenido.TabIndex = 2;
             // 
-            // LblDescripcion
+            // LknGitHub
             // 
-            this.LblDescripcion.AutoSize = true;
-            this.LblDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDescripcion.Location = new System.Drawing.Point(9, 29);
-            this.LblDescripcion.Name = "LblDescripcion";
-            this.LblDescripcion.Size = new System.Drawing.Size(517, 32);
-            this.LblDescripcion.TabIndex = 2;
-            this.LblDescripcion.Text = "SLEEPC es una aplicación interactiva que permite programar la suspensión automáti" +
-    "ca \r\nde la PC.\r\n";
+            this.LknGitHub.AutoSize = true;
+            this.LknGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LknGitHub.Location = new System.Drawing.Point(459, 101);
+            this.LknGitHub.Name = "LknGitHub";
+            this.LknGitHub.Size = new System.Drawing.Size(49, 16);
+            this.LknGitHub.TabIndex = 13;
+            this.LknGitHub.TabStop = true;
+            this.LknGitHub.Text = "GitHub";
+            this.LknGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LknGitHub_LinkClicked);
             // 
-            // LblDesarrollador
+            // linkLabel1
             // 
-            this.LblDesarrollador.AutoSize = true;
-            this.LblDesarrollador.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDesarrollador.Location = new System.Drawing.Point(9, 101);
-            this.LblDesarrollador.Name = "LblDesarrollador";
-            this.LblDesarrollador.Size = new System.Drawing.Size(132, 16);
-            this.LblDesarrollador.TabIndex = 4;
-            this.LblDesarrollador.Text = "Juan Carlos Cáceres.\r\n";
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(250, 101);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(188, 16);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Mail: jccaceres08@gmail.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // LblTitulo2
+            // LnkInstagram
             // 
-            this.LblTitulo2.AutoSize = true;
-            this.LblTitulo2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.LblTitulo2.Location = new System.Drawing.Point(9, 81);
-            this.LblTitulo2.Name = "LblTitulo2";
-            this.LblTitulo2.Size = new System.Drawing.Size(105, 18);
-            this.LblTitulo2.TabIndex = 3;
-            this.LblTitulo2.Text = "Desarrollador";
+            this.LnkInstagram.AutoSize = true;
+            this.LnkInstagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkInstagram.Location = new System.Drawing.Point(162, 101);
+            this.LnkInstagram.Name = "LnkInstagram";
+            this.LnkInstagram.Size = new System.Drawing.Size(67, 16);
+            this.LnkInstagram.TabIndex = 11;
+            this.LnkInstagram.TabStop = true;
+            this.LnkInstagram.Text = "Instagram";
+            this.LnkInstagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkInstagram_LinkClicked);
+            // 
+            // LblDespedida
+            // 
+            this.LblDespedida.AutoSize = true;
+            this.LblDespedida.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDespedida.Location = new System.Drawing.Point(9, 423);
+            this.LblDespedida.Name = "LblDespedida";
+            this.LblDespedida.Size = new System.Drawing.Size(533, 32);
+            this.LblDespedida.TabIndex = 10;
+            this.LblDespedida.Text = "Gracias de mi parte por descargar y usar SLEEPC. Te agradecería mucho que me deja" +
+    "ras \r\nun feedback en mi instagram ;).\r\n";
+            // 
+            // LblLicencia
+            // 
+            this.LblLicencia.AutoSize = true;
+            this.LblLicencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLicencia.Location = new System.Drawing.Point(9, 342);
+            this.LblLicencia.Name = "LblLicencia";
+            this.LblLicencia.Size = new System.Drawing.Size(519, 64);
+            this.LblLicencia.TabIndex = 9;
+            this.LblLicencia.Text = resources.GetString("LblLicencia.Text");
+            // 
+            // RtbLicencia
+            // 
+            this.RtbLicencia.BackColor = System.Drawing.Color.White;
+            this.RtbLicencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RtbLicencia.Location = new System.Drawing.Point(9, 220);
+            this.RtbLicencia.Name = "RtbLicencia";
+            this.RtbLicencia.ReadOnly = true;
+            this.RtbLicencia.Size = new System.Drawing.Size(538, 108);
+            this.RtbLicencia.TabIndex = 8;
+            this.RtbLicencia.Text = resources.GetString("RtbLicencia.Text");
+            // 
+            // LblTitulo4
+            // 
+            this.LblTitulo4.AutoSize = true;
+            this.LblTitulo4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo4.ForeColor = System.Drawing.Color.SteelBlue;
+            this.LblTitulo4.Location = new System.Drawing.Point(9, 197);
+            this.LblTitulo4.Name = "LblTitulo4";
+            this.LblTitulo4.Size = new System.Drawing.Size(67, 18);
+            this.LblTitulo4.TabIndex = 7;
+            this.LblTitulo4.Text = "Licencia";
             // 
             // label2
             // 
@@ -174,48 +231,37 @@ namespace SLEEPC
             this.LblTitulo3.TabIndex = 5;
             this.LblTitulo3.Text = "Fecha de creación";
             // 
-            // LblTitulo4
+            // LblDesarrollador
             // 
-            this.LblTitulo4.AutoSize = true;
-            this.LblTitulo4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.LblTitulo4.Location = new System.Drawing.Point(9, 197);
-            this.LblTitulo4.Name = "LblTitulo4";
-            this.LblTitulo4.Size = new System.Drawing.Size(67, 18);
-            this.LblTitulo4.TabIndex = 7;
-            this.LblTitulo4.Text = "Licencia";
+            this.LblDesarrollador.AutoSize = true;
+            this.LblDesarrollador.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDesarrollador.Location = new System.Drawing.Point(9, 101);
+            this.LblDesarrollador.Name = "LblDesarrollador";
+            this.LblDesarrollador.Size = new System.Drawing.Size(132, 16);
+            this.LblDesarrollador.TabIndex = 4;
+            this.LblDesarrollador.Text = "Juan Carlos Cáceres.\r\n";
             // 
-            // RtbLicencia
+            // LblTitulo2
             // 
-            this.RtbLicencia.BackColor = System.Drawing.Color.White;
-            this.RtbLicencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RtbLicencia.Location = new System.Drawing.Point(9, 220);
-            this.RtbLicencia.Name = "RtbLicencia";
-            this.RtbLicencia.ReadOnly = true;
-            this.RtbLicencia.Size = new System.Drawing.Size(538, 108);
-            this.RtbLicencia.TabIndex = 8;
-            this.RtbLicencia.Text = resources.GetString("RtbLicencia.Text");
+            this.LblTitulo2.AutoSize = true;
+            this.LblTitulo2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.LblTitulo2.Location = new System.Drawing.Point(9, 81);
+            this.LblTitulo2.Name = "LblTitulo2";
+            this.LblTitulo2.Size = new System.Drawing.Size(105, 18);
+            this.LblTitulo2.TabIndex = 3;
+            this.LblTitulo2.Text = "Desarrollador";
             // 
-            // LblLicencia
+            // LblDescripcion
             // 
-            this.LblLicencia.AutoSize = true;
-            this.LblLicencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLicencia.Location = new System.Drawing.Point(9, 342);
-            this.LblLicencia.Name = "LblLicencia";
-            this.LblLicencia.Size = new System.Drawing.Size(519, 64);
-            this.LblLicencia.TabIndex = 9;
-            this.LblLicencia.Text = resources.GetString("LblLicencia.Text");
-            // 
-            // LblDespedida
-            // 
-            this.LblDespedida.AutoSize = true;
-            this.LblDespedida.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDespedida.Location = new System.Drawing.Point(9, 423);
-            this.LblDespedida.Name = "LblDespedida";
-            this.LblDespedida.Size = new System.Drawing.Size(533, 32);
-            this.LblDespedida.TabIndex = 10;
-            this.LblDespedida.Text = "Gracias de mi parte por descargar y usar SLEEPC. Te agradecería mucho que me deja" +
-    "ras \r\nun feedback en mi instagram ;).\r\n";
+            this.LblDescripcion.AutoSize = true;
+            this.LblDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDescripcion.Location = new System.Drawing.Point(9, 29);
+            this.LblDescripcion.Name = "LblDescripcion";
+            this.LblDescripcion.Size = new System.Drawing.Size(517, 32);
+            this.LblDescripcion.TabIndex = 2;
+            this.LblDescripcion.Text = "SLEEPC es una aplicación interactiva que permite programar la suspensión automáti" +
+    "ca \r\nde la PC.\r\n";
             // 
             // BtnCerrar
             // 
@@ -238,52 +284,6 @@ namespace SLEEPC
             this.BtnManual.Text = "?";
             this.BtnManual.UseVisualStyleBackColor = true;
             // 
-            // LnkInstagram
-            // 
-            this.LnkInstagram.AutoSize = true;
-            this.LnkInstagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LnkInstagram.Location = new System.Drawing.Point(162, 101);
-            this.LnkInstagram.Name = "LnkInstagram";
-            this.LnkInstagram.Size = new System.Drawing.Size(67, 16);
-            this.LnkInstagram.TabIndex = 11;
-            this.LnkInstagram.TabStop = true;
-            this.LnkInstagram.Text = "Instagram";
-            this.LnkInstagram.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkInstagram_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(250, 101);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(188, 16);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Mail: jccaceres08@gmail.com";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // LknGitHub
-            // 
-            this.LknGitHub.AutoSize = true;
-            this.LknGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LknGitHub.Location = new System.Drawing.Point(459, 101);
-            this.LknGitHub.Name = "LknGitHub";
-            this.LknGitHub.Size = new System.Drawing.Size(49, 16);
-            this.LknGitHub.TabIndex = 13;
-            this.LknGitHub.TabStop = true;
-            this.LknGitHub.Text = "GitHub";
-            this.LknGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LknGitHub_LinkClicked);
-            // 
-            // PbIcono
-            // 
-            this.PbIcono.Image = global::SLEEPC.Properties.Resources.SleePC_logo;
-            this.PbIcono.Location = new System.Drawing.Point(8, 3);
-            this.PbIcono.Name = "PbIcono";
-            this.PbIcono.Size = new System.Drawing.Size(60, 57);
-            this.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbIcono.TabIndex = 0;
-            this.PbIcono.TabStop = false;
-            // 
             // FrmAcercade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +293,7 @@ namespace SLEEPC
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.PnContenido);
             this.Controls.Add(this.PnAdSuperior);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 630);
             this.MinimizeBox = false;
@@ -302,11 +303,12 @@ namespace SLEEPC
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acerca de SLEEPC";
+            this.Load += new System.EventHandler(this.FrmAcercade_Load);
             this.PnAdSuperior.ResumeLayout(false);
             this.PnAdSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbIcono)).EndInit();
             this.PnContenido.ResumeLayout(false);
             this.PnContenido.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
