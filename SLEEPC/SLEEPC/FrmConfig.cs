@@ -18,7 +18,6 @@ namespace SLEEPC
             S, //1
             B //2
         }
-
         public string RFuncion;
 
 
@@ -136,7 +135,7 @@ namespace SLEEPC
             //Guardar valores de configuracion.
             Properties.Settings.Default.Save();
 
-            MessageBox.Show("Hora de Activación establecida a las " + HoraCompleta + ";" + " " + "Con un intervalo de verificación en " + Inter + ";" + " " + "minutos "+ ";" + " " + "Acción a realizar; " + RFuncion, "Mensaje SLEEPC",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Hora de Activación establecida a las: \n** " + HoraCompleta + "m. **\n\n" + "Con un intervalo de verificación en: \n** " + Inter + " minutos ** \n\n" + "Acción a realizar: \n** " + RFuncion + " **", "Mensaje SLEEPC",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         //Boton guardar

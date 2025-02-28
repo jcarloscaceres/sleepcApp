@@ -36,6 +36,7 @@ namespace SLEEPC
             TTempo.Stop();
             TTempo.Enabled = false;
             a = 29;
+            Properties.Settings.Default.CMConteo = true;
             Close();
         }
 
@@ -49,16 +50,20 @@ namespace SLEEPC
             switch (Accion)
             {
                 case 0:
+                    Properties.Settings.Default.CMConteo = true;
                     System.Diagnostics.Process.Start("shutdown", "/s /t 0");
                     //MessageBox.Show("Se apaga la PC");
                     break;
                 case 1:
+                    Properties.Settings.Default.CMConteo = false;
                     Application.SetSuspendState(PowerState.Suspend, true, true);
                     //MessageBox.Show("Se suspende la PC");
                     break;
                 case 2:
+                    Properties.Settings.Default.CMConteo = false;
                     System.Diagnostics.Process.Start("rundll32.exe", "user32.dll,LockWorkStation");
                     //MessageBox.Show("Se bloquea la PC");
+
                     break;
             }
 

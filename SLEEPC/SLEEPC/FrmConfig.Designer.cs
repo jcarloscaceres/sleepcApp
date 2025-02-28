@@ -480,8 +480,6 @@ namespace SLEEPC
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(650, 431);
             this.Name = "FrmConfig";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración SLEEPC";
             this.Load += new System.EventHandler(this.FrmConfig_Load);

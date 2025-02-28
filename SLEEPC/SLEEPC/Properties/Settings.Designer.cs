@@ -70,5 +70,17 @@ namespace SLEEPC.Properties {
                 this["CFuncion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CMConteo {
+            get {
+                return ((bool)(this["CMConteo"]));
+            }
+            set {
+                this["CMConteo"] = value;
+            }
+        }
     }
 }

@@ -8,10 +8,8 @@ namespace SLEEPC
     {
         public string Hora_Establecida;
         public int Down;
-
         private bool isDragging = false;
         private Point lastCursor;
-
         private bool Verifi;
 
         public Form1()
@@ -20,19 +18,22 @@ namespace SLEEPC
         }
 
         //metodo para mostrar diferentes mensajes en la notificaciones
-        private string Notifica(string mensaje)
+        private void Notifica(string mensaje)
         {
             notifyIcon1.BalloonTipText = mensaje;
             notifyIcon1.ShowBalloonTip(3000);
-            return mensaje;
+            
         }
 
         //opciones para el menu contextual de click derecho
         #region
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAcercade f2 = new FrmAcercade();
-            f2.ShowDialog();
+            using (var acercaDe = new FrmAcercade())
+            {
+                acercaDe.ShowDialog();
+            }
+            
         }
 
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,8 +56,10 @@ namespace SLEEPC
 
         private void acercaDeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmAcercade f2 = new FrmAcercade();
-            f2.ShowDialog();
+            using (var acercaDe = new FrmAcercade())
+            {
+                acercaDe.ShowDialog();
+            }
         }
 
         private void configuraciónToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -102,23 +105,28 @@ namespace SLEEPC
         //metodo para mostrar la configuracion y luego cargar la data;
         private void MuestraConfig()
         {
-            FrmConfig conf = new FrmConfig();
-            conf.ShowDialog();
-            CargaData();
+            using (var Configuracion = new FrmConfig())
+            {
+                Configuracion.ShowDialog();
+                CargaData();
+            }
+            
+        }
+
+        private void MuestraConteo()
+        {
+            using (var Conteo = new FrmConteo())
+            {
+                Conteo.ShowDialog();
+            }
         }
 
         //timer que maneja la opacidad
         private void TOpacity_Tick(object sender, EventArgs e)
         {
-            // Verificar si el cursor está fuera del formulario
-            if (!this.ClientRectangle.Contains(this.PointToClient(Cursor.Position)))
-            {
-                this.Opacity = 0.2; // Reducir opacidad al 30%
-            }
-            else
-            {
-                this.Opacity = 0.9; // Restaurar opacidad al 90% si el cursor está dentro
-            }
+
+            Opacity = ClientRectangle.Contains(PointToClient(Cursor.Position)) ? 0.9 : 0.2;
+
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -164,12 +172,12 @@ namespace SLEEPC
         private void TPrincipal_Tick(object sender, EventArgs e)
         {
             //Establecer la hora actual del sistema con formato cadena de texto
-            LblHoraActual.Text = DateTime.Now.ToString("hh" + ":" + "mm" + ":" + "ss" + " " + "t" + ".");
+            LblHoraActual.Text = DateTime.Now.ToString("hh:mm:ss t.");
 
             if(LblHoraActual.Text == Hora_Establecida)
             {
-                Notifica("SLEEPC se ha activado.  Verificación en: " + Down + " segundos");
-                
+                Notifica("SLEEPC se ha activado.  Verificación en: " + Down / 60 + " minutos");
+                Properties.Settings.Default.CMConteo = true;
                 Verifi = true;
             }
 
@@ -181,12 +189,13 @@ namespace SLEEPC
                 {
                     Verifi = false;
 
-                    FrmConteo conteo = new FrmConteo();
-                    conteo.ShowDialog();
-                    Down = 0;
-                    CargaData();
-                    Verifi = true;
-                    Notifica("SLEEPC se aplazó a: " + Down + " segundos");
+                    if (Properties.Settings.Default.CMConteo == true)
+                    {
+                        MuestraConteo();
+                        Down = 0;
+                        CargaData();
+                        Verifi = true;
+                    }
 
                 }
             }
